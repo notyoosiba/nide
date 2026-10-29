@@ -1,0 +1,23 @@
+# Rust / Cargo build artifacts
+/target/
+**/*.rs.bk
+*.pdb
+
+# nide atomic save temporary files
+.nide-save-*
+
+# Editor & IDE directories/files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Logs & local environment
+*.log
+.env
+.env.*

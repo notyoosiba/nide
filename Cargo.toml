@@ -1,0 +1,58 @@
+[package]
+name = "nide"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+base64 = "0.22"
+clap = { version = "4", features = ["derive"] }
+crossterm = "0.28"
+dirs = "7"
+ignore = "0.4"
+notify = "8"
+nucleo = "0.5"
+portable-pty = "0.9"
+ratatui = "0.30"
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+signal-hook = "0.3"
+syntect = "5.3"
+toml = "1.1"
+two-face = "0.5"
+unicase = "2.6"
+unicode-segmentation = "1"
+vt100 = "0.18"
+grep-matcher = "0.1"
+grep-regex = "0.1"
+grep-searcher = "0.1"
+tree-sitter = "0.25"
+tree-sitter-rust = "0.24"
+tree-sitter-python = "0.25"
+tree-sitter-javascript = "0.25"
+tree-sitter-typescript = "0.23"
+tree-sitter-go = "0.25"
+tree-sitter-json = "0.24"
+tree-sitter-toml-ng = "0.7"
+tree-sitter-bash = "0.25"
+tree-sitter-c = "0.24"
+tree-sitter-cpp = "0.23"
+tree-sitter-html = "0.23"
+tree-sitter-css = "0.25"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "gif", "webp", "bmp", "ico", "tiff"] }
+resvg = "0.48"
+pulldown-cmark = { version = "0.13", default-features = false }
+merman = { version = "0.9", default-features = false, features = ["all-diagrams", "layout-cytoscape", "png", "ascii"] }
+serde_json = "1"
+
+[dev-dependencies]
+tempfile = "3"
+
+[profile.dev]
+debug = "line-tables-only"
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[lints.rust]
+unsafe_code = "forbid"
